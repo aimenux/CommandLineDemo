@@ -17,7 +17,7 @@ namespace McMasterCommandLineUtilsApp
 
             app.HelpOption();
 
-            app.Command("hello", (command) =>
+            app.Command(Constants.HelloCommandName, (command) =>
             {
                 command.Description = Constants.HelloCommandDescription;
                 command.OnExecute(() =>
@@ -27,7 +27,7 @@ namespace McMasterCommandLineUtilsApp
                 });
             });
 
-            app.Command("welcome", (command) =>
+            app.Command(Constants.WelcomeCommandName, (command) =>
             {
                 command.Description = Constants.WelcomeCommandDescription;
                 var nameOption = command.Option<string>("--name|-n", Constants.WelcomeOptionDescription, CommandOptionType.SingleValue);
@@ -41,7 +41,7 @@ namespace McMasterCommandLineUtilsApp
                 });
             });
 
-            app.Command("sum", (command) =>
+            app.Command(Constants.SumCommandName, (command) =>
             {
                 command.Description = Constants.SumCommandDescription;
                 var numbersOption = command.Option<int>("--numbers|-n", Constants.SumOptionDescription, CommandOptionType.MultipleValue);
@@ -55,7 +55,7 @@ namespace McMasterCommandLineUtilsApp
                 });
             });
 
-            app.Command("length", (command) =>
+            app.Command(Constants.LengthCommandName, (command) =>
             {
                 command.Description = Constants.LengthCommandDescription;
                 var inputOption = command.Option<string>("--input|-i", Constants.LengthOptionDescription, CommandOptionType.SingleValue);
@@ -69,7 +69,7 @@ namespace McMasterCommandLineUtilsApp
                 });
             });
 
-            app.Command("reverse", (command) =>
+            app.Command(Constants.ReverseCommandName, (command) =>
             {
                 command.Description = Constants.ReverseCommandDescription;
                 var inputOption = command.Option<string>("--input|-i", Constants.ReverseOptionDescription, CommandOptionType.SingleValue);

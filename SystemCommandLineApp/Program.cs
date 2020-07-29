@@ -25,7 +25,7 @@ namespace SystemCommandLineApp
 
         private static Command BuildSayHelloCommand()
         {
-            var cmd = new Command("hello", Constants.HelloCommandDescription)
+            var cmd = new Command(Constants.HelloCommandName, Constants.HelloCommandDescription)
             {
                 Handler = CommandHandler.Create(() =>
                 {
@@ -37,7 +37,7 @@ namespace SystemCommandLineApp
 
         private static Command BuildSayWelcomeCommand()
         {
-            var cmd = new Command("welcome", Constants.WelcomeCommandDescription);
+            var cmd = new Command(Constants.WelcomeCommandName, Constants.WelcomeCommandDescription);
             cmd.AddOption(new Option(new[] {"--name", "-n"}, Constants.WelcomeOptionDescription)
             {
                 Argument = new Argument<string>
@@ -54,7 +54,7 @@ namespace SystemCommandLineApp
 
         private static Command BuildNumbersSumCommand()
         {
-            var cmd = new Command("sum", Constants.SumCommandDescription);
+            var cmd = new Command(Constants.SumCommandName, Constants.SumCommandDescription);
             cmd.AddOption(new Option(new[] {"--numbers", "-n"}, Constants.SumOptionDescription)
             {
                 Argument = new Argument<int[]>()
@@ -68,7 +68,7 @@ namespace SystemCommandLineApp
 
         private static Command BuildStringLengthCommand()
         {
-            var cmd = new Command("length", Constants.LengthCommandDescription);
+            var cmd = new Command(Constants.LengthCommandName, Constants.LengthCommandDescription);
             cmd.AddOption(new Option(new[] {"--input", "-i"}, Constants.LengthOptionDescription)
             {
                 Argument = new Argument<string>
@@ -85,7 +85,7 @@ namespace SystemCommandLineApp
 
         private static Command BuildStringReverseCommand()
         {
-            var cmd = new Command("reverse", Constants.ReverseCommandDescription);
+            var cmd = new Command(Constants.ReverseCommandName, Constants.ReverseCommandDescription);
             cmd.AddOption(new Option(new[] {"--input", "-i"}, Constants.ReverseOptionDescription)
             {
                 Argument = new Argument<string>

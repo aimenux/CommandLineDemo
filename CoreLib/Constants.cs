@@ -7,6 +7,12 @@ namespace CoreLib
         public const string Name = "CommandLineDemo";
         public const string Description = "Command line parsing frameworks";
 
+        public const string HelloCommandName = "hello";
+        public const string WelcomeCommandName = "welcome";
+        public const string ReverseCommandName = "reverse";
+        public const string LengthCommandName = "length";
+        public const string SumCommandName = "sum";
+
         public const string HelloCommandDescription = "Type hello command in order to say hello world";
         public const string WelcomeCommandDescription = "Type welcome command in order to say welcome name";
         public const string ReverseCommandDescription = "Type reverse command to reverse string";
